@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+section {
+    min-height: 400px;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: #C81E1E;
+    border-color: #C81E1E;
+}
+
+.btn-primary:hover {
+    background-color: #a31818;
+    border-color: #a31818;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+}
