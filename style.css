@@ -1,7 +1,5 @@
-/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* CSS Variables for consistent theming */
 :root {
     --primary-color: #cc0000;
     --secondary-color: #2c3e50;
@@ -17,7 +15,6 @@
     --gradient-hero: linear-gradient(135deg, rgba(204, 0, 0, 0.8), rgba(231, 76, 60, 0.8));
 }
 
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -33,31 +30,25 @@ body {
     font-size: 16px;
 }
 
-/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Add some spacing between sections */
 section {
     margin-bottom: 0;
     position: relative;
 }
 
-/* Ensure proper spacing for fixed navbar */
 body {
     padding-top: 0;
 }
 
-/* Ensure hero section is properly contained */
 .hero-section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
 }
-
-/* Ensure all content sections have proper backgrounds */
 #about,
 #programs,
 #campus,
@@ -72,7 +63,6 @@ body {
     background-color: #f8f9fa;
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
     font-weight: 600;
@@ -84,8 +74,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     color: var(--text-light);
 }
-
-/* Navigation */
 .navbar {
     background: var(--gradient-secondary) !important;
     padding: 1rem 0;
@@ -163,7 +151,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-2px);
 }
 
-/* Hero Section */
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('imgs/rutgers1.jpg') center/cover no-repeat;
     min-height: 100vh;
@@ -272,8 +259,6 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow-hover);
 }
 
-
-/* Section Styles */
 .section-title {
     font-size: 2.8rem;
     font-weight: 700;
@@ -296,7 +281,6 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 2px;
 }
 
-/* About Section */
 #about {
     background-color: #ffffff;
     position: relative;
@@ -357,7 +341,6 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow-hover);
 }
 
-/* Programs Section */
 #programs {
     background-color: #f8f9fa;
     position: relative;
@@ -429,7 +412,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.95rem;
 }
 
-/* Campus Life Section */
 #campus {
     background-color: #ffffff;
     position: relative;
@@ -503,7 +485,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-/* Contact Section */
 #contact {
     background-color: #f8f9fa;
     position: relative;
@@ -609,7 +590,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-/* Form Styles */
 .form-control {
     border: 2px solid #eee;
     border-radius: 10px;
@@ -659,7 +639,6 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
-/* Footer */
 footer {
     background: var(--gradient-secondary) !important;
     color: white;
@@ -683,7 +662,6 @@ footer {
     color: white !important;
 }
 
-/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -727,7 +705,6 @@ footer {
     transform: translateY(0);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2.8rem;
@@ -866,7 +843,6 @@ footer {
     }
 }
 
-/* Utility Classes */
 .text-gradient {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -882,18 +858,15 @@ footer {
     box-shadow: var(--shadow-hover);
 }
 
-/* Loading Animation */
 .loading {
     opacity: 0;
     animation: fadeIn 0.5s ease forwards;
 }
 
-/* Smooth transitions for all interactive elements */
 * {
     transition: all 0.3s ease;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }

@@ -1,4 +1,3 @@
-// Utility Functions
 function toggleAidDetails() {
     const aidDetails = document.getElementById('aidDetails');
     const isVisible = aidDetails.style.display === 'block';
@@ -12,7 +11,7 @@ function toggleAidDetails() {
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
-        const offsetTop = section.offsetTop - 80; // Account for fixed navbar
+        const offsetTop = section.offsetTop - 80; 
         window.scrollTo({
             top: offsetTop,
             behavior: 'smooth'
@@ -20,7 +19,7 @@ function scrollToSection(sectionId) {
     }
 }
 
-// Smooth scrolling for all anchor links
+//smooth scrolling for all anchor links
 function initSmoothScrolling() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -31,7 +30,7 @@ function initSmoothScrolling() {
     });
 }
 
-// Navbar scroll effect
+//NAvbar scroll effect
 function initNavbarScroll() {
     const navbar = document.querySelector('.navbar');
     let lastScrollTop = 0;
@@ -49,7 +48,7 @@ function initNavbarScroll() {
     });
 }
 
-// Intersection Observer for fade-in animations
+//intersection Observer for fade-in animations
 function initFadeInAnimations() {
     const fadeInElements = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver((entries) => {
@@ -67,7 +66,7 @@ function initFadeInAnimations() {
     fadeInElements.forEach(element => observer.observe(element));
 }
 
-// Active navigation highlighting
+//active navigation highlighting
 function initActiveNavigation() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -94,7 +93,7 @@ function initActiveNavigation() {
     });
 }
 
-// Card hover effects
+//card hover effects
 function initCardEffects() {
     const cards = document.querySelectorAll('.program-card, .campus-card, .contact-item');
     
@@ -108,117 +107,3 @@ function initCardEffects() {
         });
     });
 }
-
-// Form handling
-function initFormHandling() {
-    const form = document.getElementById('inquiryForm');
-    const formMessage = document.getElementById('formMessage');
-    
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(form);
-            const name = formData.get('name') || document.getElementById('name').value;
-            const email = formData.get('email') || document.getElementById('email').value;
-            const phone = formData.get('phone') || document.getElementById('phone').value;
-            const message = formData.get('message') || document.getElementById('message').value;
-            
-            // Simple validation
-            if (!name || !email || !message) {
-                showMessage('Please fill in all required fields.', 'error');
-                return;
-            }
-            
-            if (!isValidEmail(email)) {
-                showMessage('Please enter a valid email address.', 'error');
-                return;
-            }
-            
-            // Simulate form submission
-            showMessage('Thank you for your inquiry! We will get back to you soon.', 'success');
-            form.reset();
-        });
-    }
-}
-
-// Email validation
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-// Show form messages
-function showMessage(text, type) {
-    const formMessage = document.getElementById('formMessage');
-    if (formMessage) {
-        formMessage.innerHTML = `
-            <div class="alert alert-${type === 'success' ? 'success' : 'danger'} alert-dismissible fade show" role="alert">
-                ${text}
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            </div>
-        `;
-        
-        // Auto-hide after 5 seconds
-        setTimeout(() => {
-            const alert = formMessage.querySelector('.alert');
-            if (alert) {
-                alert.remove();
-            }
-        }, 5000);
-    }
-}
-
-// Parallax effect for hero section (disabled to prevent background bleeding)
-function initParallaxEffect() {
-    // Parallax effect disabled to prevent background image bleeding issues
-    return;
-}
-
-// Scroll indicator click handler (removed - no longer needed)
-function initScrollIndicator() {
-    // Scroll indicator removed from HTML
-    return;
-}
-
-// Loading animation
-function initLoadingAnimation() {
-    document.body.classList.add('loading');
-    
-    window.addEventListener('load', () => {
-        document.body.classList.remove('loading');
-        document.body.classList.add('loaded');
-    });
-}
-
-// Initialize all functionality
-document.addEventListener('DOMContentLoaded', () => {
-    initSmoothScrolling();
-    initNavbarScroll();
-    initFadeInAnimations();
-    initActiveNavigation();
-    initCardEffects();
-    initFormHandling();
-    initParallaxEffect();
-    initScrollIndicator();
-    initLoadingAnimation();
-    
-    // Add loading class to body
-    document.body.classList.add('loading');
-    
-    // Remove loading class after page loads
-    window.addEventListener('load', () => {
-        document.body.classList.remove('loading');
-        document.body.classList.add('loaded');
-    });
-});
-
-// Handle window resize
-window.addEventListener('resize', () => {
-    // Recalculate any size-dependent features
-    const heroSection = document.querySelector('.hero-section');
-    if (heroSection && window.innerWidth < 768) {
-        heroSection.style.minHeight = '100vh';
-    }
-});
