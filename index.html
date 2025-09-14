@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rutgers University Recruitment</title>
+    <title>Rutgers University - Excellence in Education</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg" alt="Rutgers Logo" class="logo-img">
-                Rutgers University
+                <img src="imgs/rutgers1.jpg" alt="Rutgers Logo" class="logo-img">
+                <span class="brand-text">Rutgers University</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -21,13 +22,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="#home"><i class="fas fa-home me-1"></i>Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#recruiters">Recruiters</a>
+                        <a class="nav-link" href="#about"><i class="fas fa-university me-1"></i>About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#application">Application</a>
+                        <a class="nav-link" href="#programs"><i class="fas fa-graduation-cap me-1"></i>Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#campus"><i class="fas fa-building me-1"></i>Campus Life</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><i class="fas fa-envelope me-1"></i>Contact</a>
                     </li>
                 </ul>
             </div>
@@ -36,124 +43,318 @@
 
     <section id="home" class="container-fluid hero-section text-center">
         <div class="hero-overlay">
-            <h2 class="section-title">Discover Rutgers University</h2>
-            <p class="hero-text">A Premier Institution for Academic Excellence and Innovation</p>
-            <button class="btn btn-primary btn-explore" onclick="scrollToSection('application')">Explore Now</button>
-        </div>
-    </section>
-
-    <section id="recruiters" class="container py-5">
-        <h2 class="section-title">Information for Recruiters</h2>
-        <div class="row">
-            <div class="col-md-6 fade-in">
-                <h3 class="sub-title">Academic Programs</h3>
-                <ul class="program-list">
-                    <li>Computer Science</li>
-                    <li>Biology</li>
-                    <li>Business Administration</li>
-                    <li>Mechanical Engineering</li>
-                    <li>Psychology</li>
-                    <li>Chemistry</li>
-                    <li>Political Science</li>
-                    <li>English Literature</li>
-                    <li>Mathematics</li>
-                    <li>History</li>
-                </ul>
-                <p>Our curriculum emphasizes hands-on learning and cutting-edge research.</p>
-                <p>Students engage in core courses and specialized electives.</p>
-                <p>Our faculty comprises world-class scholars and industry leaders.</p>
-            </div>
-            <div class="col-md-6 fade-in">
-                <h3 class="sub-title">Alumni Success</h3>
-                <p>90% job placement rate within six months of graduation.</p>
-                <p>Notable alumni include Pulitzer Prize winners and Fortune 500 CEOs.</p>
-                <p>Strategic partnerships with Google, Johnson and Johnson, and more.</p>
-                <p>Extensive internship opportunities with top industries.</p>
-                <p>Our alumni network fosters career growth and mentorship.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="application" class="container py-5 bg-light">
-        <h2 class="section-title">Application and Student Life</h2>
-        <div class="row">
-            <div class="col-md-6 fade-in">
-                <h3 class="sub-title">Cost and Financial Aid</h3>
-                <p>Tuition: $16,000/year (in-state), $33,000/year (out-of-state).</p>
-                <p>Fees: Approximately $3,000/year.</p>
-                <p>Scholarships, grants, and loans available.</p>
-                <p>Merit-based and need-based aid for eligible students.</p>
-                <p>Flexible payment plans with semester deadlines.</p>
-                <button class="btn btn-primary btn-aid" onclick="toggleAidDetails()">Learn More About Aid</button>
-                <div id="aidDetails" class="mt-3 aid-details">
-                    <p>Apply for scholarships based on academic merit.</p>
-                    <p>Need-based grants for qualifying students.</p>
-                    <p>Federal and private loan options available.</p>
-                    <p>Contact our financial aid office for guidance.</p>
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to Rutgers University</h1>
+                <p class="hero-subtitle">Excellence in Education Since 1766</p>
+                <p class="hero-text">A Premier Institution for Academic Excellence, Innovation, and Student Success</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-explore" onclick="scrollToSection('about')">
+                        <i class="fas fa-play me-2"></i>Explore Now
+                    </button>
+                    <button class="btn btn-outline-light btn-apply" onclick="scrollToSection('contact')">
+                        <i class="fas fa-arrow-right me-2"></i>Apply Today
+                    </button>
                 </div>
             </div>
-            <div class="col-md-6 fade-in">
-                <h3 class="sub-title">Student Life</h3>
+        </div>
+    </section>
+
+    <section id="about" class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="section-title">About Rutgers University</h2>
+                <p class="lead">Founded in 1766, Rutgers University is one of America's oldest and most prestigious institutions of higher learning.</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">50,000+</div>
+                        <div class="stat-label">Students</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4,000+</div>
+                        <div class="stat-label">Faculty</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Programs</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">250+</div>
+                        <div class="stat-label">Years</div>
+                    </div>
+                </div>
+                <p>Our commitment to academic excellence, research innovation, and student success has made us a leader in higher education.</p>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-image">
+                    <img src="imgs/rutgers1.jpg" alt="Rutgers Campus" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="container py-5 bg-light">
+        <h2 class="section-title text-center">Academic Programs</h2>
+        <p class="text-center lead mb-5">Choose from over 500 undergraduate and graduate programs across our campuses</p>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h4>Computer Science</h4>
+                    <p>Cutting-edge curriculum in software engineering, AI, and data science.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h4>Biology & Life Sciences</h4>
+                    <p>Research-focused programs in molecular biology, genetics, and biotechnology.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Business Administration</h4>
+                    <p>Comprehensive business education with real-world applications and internships.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4>Engineering</h4>
+                    <p>Innovative engineering programs in mechanical, electrical, and civil engineering.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4>Psychology</h4>
+                    <p>Explore human behavior and mental processes through research and clinical practice.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h4>Chemistry</h4>
+                    <p>Advanced chemistry programs with state-of-the-art laboratories and research facilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="campus" class="container py-5">
+        <h2 class="section-title text-center">Campus Life</h2>
+        <p class="text-center lead mb-5">Experience vibrant campus life with endless opportunities for growth and connection</p>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="campus-card">
+                    <div class="campus-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h4>Housing & Residence</h4>
+                    <p>Modern residence halls with various living options from traditional dorms to apartment-style housing.</p>
+                    <ul class="campus-features">
+                        <li>24/7 Security</li>
+                        <li>Study Lounges</li>
+                        <li>Laundry Facilities</li>
+                        <li>Dining Options</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="campus-card">
+                    <div class="campus-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Student Organizations</h4>
+                    <p>Join over 500 student clubs and organizations covering academics, sports, arts, and community service.</p>
+                    <ul class="campus-features">
+                        <li>Academic Societies</li>
+                        <li>Cultural Groups</li>
+                        <li>Sports Clubs</li>
+                        <li>Volunteer Programs</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="campus-card">
+                    <div class="campus-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h4>Athletics & Recreation</h4>
+                    <p>State-of-the-art fitness centers, intramural sports, and Division I athletics programs.</p>
+                    <ul class="campus-features">
+                        <li>Fitness Centers</li>
+                        <li>Intramural Sports</li>
+                        <li>Swimming Pools</li>
+                        <li>Rock Climbing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container py-5 bg-light">
+        <h2 class="section-title text-center">Get in Touch</h2>
+        <p class="text-center lead mb-5">Ready to start your journey at Rutgers? We're here to help!</p>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="contact-info mb-5">
+                    <div class="row text-center">
+                        <div class="col-md-4 mb-3">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h5>Location</h5>
+                                <p>New Brunswick, NJ<br>Multiple Campus Locations</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <h5>Phone</h5>
+                                <p>(732) 445-4636<br>Monday-Friday, 9 AM - 5 PM</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <h5>Email</h5>
+                                <p>admissions@rutgers.edu<br>info@rutgers.edu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="row">
-                    <div class="col-12">
-                        <div class="card mb-3 card-hover">
-                            <img src="https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg" class="card-img-top" alt="Campus Facilities">
-                            <div class="card-body">
-                                <h5 class="card-title">Campus Facilities</h5>
-                                <p class="card-text">State-of-the-art libraries, labs, and fitness centers.</p>
+                    <div class="col-lg-6">
+                        <h4>Tuition & Financial Aid</h4>
+                        <div class="tuition-info">
+                            <div class="tuition-item">
+                                <span class="tuition-label">In-State Tuition:</span>
+                                <span class="tuition-amount">$16,000/year</span>
+                            </div>
+                            <div class="tuition-item">
+                                <span class="tuition-label">Out-of-State Tuition:</span>
+                                <span class="tuition-amount">$33,000/year</span>
+                            </div>
+                            <div class="tuition-item">
+                                <span class="tuition-label">Fees:</span>
+                                <span class="tuition-amount">~$3,000/year</span>
+                            </div>
+                            <div class="tuition-item">
+                                <span class="tuition-label">Housing:</span>
+                                <span class="tuition-amount">$8,000-$12,000/year</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="card mb-3 card-hover">
-                            <img src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg" class="card-img-top" alt="Clubs">
-                            <div class="card-body">
-                                <h5 class="card-title">Clubs and Activities</h5>
-                                <p class="card-text">Over 500 student organizations and vibrant events.</p>
-                            </div>
+                        <button class="btn btn-primary btn-aid" onclick="toggleAidDetails()">
+                            <i class="fas fa-info-circle me-2"></i>Learn More About Financial Aid
+                        </button>
+                        <div id="aidDetails" class="mt-3 aid-details">
+                            <h6>Financial Aid Options:</h6>
+                            <ul>
+                                <li>Merit-based scholarships</li>
+                                <li>Need-based grants</li>
+                                <li>Federal and private loans</li>
+                                <li>Work-study programs</li>
+                                <li>Payment plans available</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-12">
-                        <div class="card mb-3 card-hover">
-                            <img src="https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg" class="card-img-top" alt="Housing">
-                            <div class="card-body">
-                                <h5 class="card-title">Housing</h5>
-                                <p class="card-text">Dorms: $8,000-$12,000/year, various styles.</p>
+                    <div class="col-lg-6">
+                        <h4>Send us a Message</h4>
+                        <form id="inquiryForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" required>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <p>Engage in sports, arts, and volunteer programs.</p>
-                        <p>Enjoy annual events like homecoming and cultural festivals.</p>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea class="form-control" id="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit w-100">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </form>
+                        <div id="formMessage" class="mt-3"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <h3 class="sub-title mt-4">Apply Today</h3>
-        <p>Location: New Brunswick, NJ</p>
-        <p>Email: admissions@rutgers.edu</p>
-        <p>Phone: (732) 445-4636</p>
-        <p>Office Hours: Monday-Friday, 9 AM - 5 PM</p>
-        <form id="inquiryForm" class="mt-4">
-            <div class="mb-3">
-                <label for="name" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Your Message</label>
-                <textarea class="form-control" id="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-submit">Submit Inquiry</button>
-        </form>
-        <div id="formMessage" class="mt-3"></div>
     </section>
 
-    <footer class="bg-dark text-white text-center py-4">
-        <p>&copy; 2025 Rutgers University</p>
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-white mb-3">Rutgers University</h5>
+                    <p class="text-light">Excellence in education since 1766. Join our community of scholars, researchers, and innovators.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="text-white mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#about" class="text-light text-decoration-none">About</a></li>
+                        <li><a href="#programs" class="text-light text-decoration-none">Programs</a></li>
+                        <li><a href="#campus" class="text-light text-decoration-none">Campus Life</a></li>
+                        <li><a href="#contact" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="text-white mb-3">Admissions</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Apply Now</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Visit Campus</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Financial Aid</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">International Students</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="text-white mb-3">Contact Info</h6>
+                    <ul class="list-unstyled text-light">
+                        <li><i class="fas fa-map-marker-alt me-2"></i>New Brunswick, NJ</li>
+                        <li><i class="fas fa-phone me-2"></i>(732) 445-4636</li>
+                        <li><i class="fas fa-envelope me-2"></i>admissions@rutgers.edu</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-light">&copy; 2025 Rutgers University. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
