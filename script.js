@@ -30,7 +30,7 @@ function initSmoothScrolling() {
     });
 }
 
-//NAvbar scroll effect
+//navbar effect scroll
 function initNavbarScroll() {
     const navbar = document.querySelector('.navbar');
     let lastScrollTop = 0;
